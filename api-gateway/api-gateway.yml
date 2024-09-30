@@ -1,0 +1,159 @@
+spring.cloud.gateway.httpclient.codec.multipart.enabled: true
+spring.cloud.gateway.httpclient.max-request-size: 1000MB
+server:
+  port: 8081
+security-constraints:
+  open-uri:
+    - /actuator/**
+    - /api/v1/*/api-doc
+    - /api/v1/questions/**
+    - /api/v1/profile/profiles
+    - /webjars/swagger-ui/**
+    - /swagger-ui**
+    - /v3/api-docs/**
+cors:
+  allowedOrigins: "*"
+  allowedMethods: "*"
+  allowedHeaders: "*"
+  allowedCredentials: true
+  maxAge: "3600"
+spring:
+  cloud:
+    gateway:
+      httpclient:
+        connect-timeout: 3000
+        response-timeout: 70s
+        codec:
+          multipart:
+            enabled: true
+      forwarded:
+        enabled: true
+      x-forwarded:
+        enabled: true
+        forEnabled: true
+        protoEnabled: true
+        portEnabled: true
+        prefixEnabled: true
+      default-filters:
+        - TokenRelay
+      discovery:
+        locator:
+          enabled: false
+      routes:
+        - id: profiles
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/profiles/*/languages, /api/v1/employees/*/skills, /api/v1/employees/*/competency, /api/v1/employees/*/assignment, /api/v1/employees/*/personal-details, /api/v1/employees/*/dashboard-layout, /api/v1/profiles/*, /api/v1/agencies-by-name, /api/v1/get-agencies-names, /api/v1/profiles/*/userCV, /api/v1/profiles/average-profile-percentage, /api/v1/profiles
+            - Method=GET,PUT,PATCH,DELETE,POST
+          filters:
+            - AddPrincipalToPathFilter
+        - id: projects
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/projects, /api/v1/projects/archived, /api/v1/projects/*, /api/v1/projects/*/team, /api/v1/projects/milestone/*/sub-milestone/*/mark, /api/v1/projects/milestone/*/mark, /api/v1/projects/assigned-team/*/employees, /api/v1/projects/setup, /api/v1/projects/assistant, /api/v1/projects/roles/assistant, /api/v1/projects/assistant/summarizing, /api/v1/projects/milestone/assistant/summarizing, /api/v1/projects/role/assistant, /api/v1/projects/*/team, /api/v1/projects/*/team, /api/v1/projects/team/users, /api/v1/projects/team/generate-additional-matches, /api/v1/projects/*/milestones, /api/v1/projects/assigned-team/*/employees/*, /api/v1/projects/team/*, /api/v1/projects/team/*/*, /api/v1/projects/team/generate-salary, /api/v1/projects/*/past
+            - Method=GET,PUT,PATCH,DELETE,POST
+          filters:
+            - AddPrincipalToPathFilter
+        - id: positions
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/positions, /api/v1/positions/*, /api/v1/positions/archived, /api/positions/projects/*, /api/v1/positions/*/matched-employees, /api/v1/positions/description, /api/v1/matches/*, /api/v1/matches/*/matched-employees, /api/v1/roles/assistant, /api/v1/roles/assistant/summarizing, /api/v1/roles/assistant/summarizing, /api/v1/positions/assistant, /api/v1/positions/assistant/summarizing, /api/v1/positions/matched-employees, /api/v1/positions/*/match/*, /api/v1/positions/*/matched-employees/*, /api/v1/matches, /api/v1/matches/matched-employees, /api/v1/positions/generate-salary
+            - Method=GET,PUT,DELETE,POST
+          filters:
+            - AddPrincipalToPathFilter
+        - id: twin-matches
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/twin-matches, /api/v1/twin-matches/archived, /api/v1/twin-matches/*, /api/v1/twin-matches/generate, /api/v1/twin-matches/matched-employees, /api/v1/twin-matches/*/matched-employees/*
+            - Method=GET,DELETE,POST
+          filters:
+            - AddPrincipalToPathFilter
+        - id: dream-roles
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/dream-roles, /api/v1/dream-roles/*, /api/v1/dream-roles/*/interest, /api/v1/dream-roles/interested/*, /api/v1/dream-roles/*/applicants, /api/v1/dream-roles/assistant, /api/v1/dream-roles/assistant/summarizing
+            - Method=GET,PUT,DELETE,POST
+          filters:
+            - AddPrincipalToPathFilter
+        - id: company
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/company-info, /api/v1/admins/*, /api/v1/admins, /api/v1/average-characteristics, /api/v1/gender-balance, /api/v1/age-statistics, /api/v1/name-search, /api/v1/department-profile/*, /api/v1/department-profiles-upload, /api/v1/general-dashboard-information, /api/v1/agencies-managers, /api/v1/department, /api/v1/department/*, /api/v1/roles, /api/v1/users-count, /api/v1/employees/dynamic-search, /api/v1/recent-actions, /api/v1/aspiration/personal-characteristics, /api/v1/aspiration/employees-age, /api/v1/aspiration/gender-balance, /api/v1/aspiration/departments, /api/v1/aspiration/gender-balance, /api/v1/aspiration/employees-age, /api/v1/aspiration/personal-characteristics, /api/v1/aspiration/employees-age, /api/v1/departments, /api/v1/skill-options          
+            - Method=GET,PUT,DELETE,POST,PATCH
+          filters:
+            - AddPrincipalToPathFilter
+        - id: chats
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/chats, /api/v1/chats/*, /api/v1/profiles/*/chats, /api/v1/chats/*/recent, /api/v1/chats/messages/*, /api/v1/assistant/questions, /api/v1/assistant, /api/v1/assistant/prompts
+            - Method=GET,PUT,DELETE,POST
+          filters:
+            - AddPrincipalToPathFilter
+        - id: feedback
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/feedback/projects/*/employees/*, /api/v1/feedback/projects/*/employees, /api/v1/feedback/projects/*, /api/v1/feedback/employees/*
+            - Method=GET,PUT,DELETE,POST
+          filters:
+            - AddPrincipalToPathFilter
+        - id: multimedia
+          uri: http://localhost:8097
+          predicates:
+            - Path=/api/v1/multimedia, /api/v1/multimedia-manager/**
+        - id: openapi
+          uri: http://localhost:8081
+          predicates:
+            - Path=/v3/api-docs/**
+          filters:
+            - RewritePath=/v3/api-docs/(?<path>.*), /api/v1//$\{path}/api-doc
+        - id: adminSearch2
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/admin/**
+          metadata:
+            auth-roles:
+              - iamai-admin
+          filters:
+            - RewritePath=/api/v1/admin/(?<path>.*), /api/v1//$\{path}
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            provider: keycloak
+            client-id: web
+            authorization-grant-type: authorization_code
+            redirect-uri: ${keycloak-client.server-url}/login/oauth2/code/keycloak
+            scope: openid
+        provider:
+          keycloak:
+            authorization-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/auth
+            token-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/token
+            user-info-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/userinfo
+            jwk-set-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/certs
+            user-name-attribute: name
+            user-info-authentication-method: header
+      resourceserver:
+        jwt:
+          jwk-set-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/certs
+keycloak-client:
+  server-url: https://auth-dashboard-dev.iamaiworld.ai/auth
+  realm: dashboard
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  health:
+    mail:
+      enabled: false
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.security: DEBUG
+    reactor.netty.http.client: DEBUG
+springdoc:
+  packagesToScan: com.agenatech
+health:
+  config:
+    enabled: false
