@@ -19,7 +19,7 @@ spring:
         - id: positions
           uri: http://profiles
           predicates:
-            - Path=/api/v1/positions, /api/v1/positions/archived, /api/positions/projects/*, /api/v1/positions/*/matched-employees, /api/v1/positions/description, /api/v1/matches/*, /api/v1/matches/*/matched-employees, /api/v1/roles/assistant, /api/v1/roles/assistant/summarizing, /api/v1/roles/assistant/summarizing, /api/v1/positions/assistant, /api/v1/positions/assistant/summarizing, /api/v1/positions/matched-employees, /api/v1/positions/*/match/*, /api/v1/positions/*/matched-employees/*, /api/v1/matches, /api/v1/matches/matched-employees, /api/v1/positions/generate-salary
+            - Path=/api/v1/positions, /api/v1/positions/archived, /api/v1/positions/*, /api/v1/positions/*/matched-employees, /api/v1/positions/description, /api/v1/matches/*, /api/v1/matches/*/matched-employees, /api/v1/roles/assistant, /api/v1/roles/assistant/summarizing, /api/v1/roles/assistant/summarizing, /api/v1/positions/assistant, /api/v1/positions/assistant/summarizing, /api/v1/positions/matched-employees, /api/v1/positions/*/match/*, /api/v1/positions/*/matched-employees/*, /api/v1/matches, /api/v1/matches/matched-employees, /api/v1/positions/generate-salary
             - Method=GET,PUT,DELETE,POST
           filters:
             - AddPrincipalToPathFilter
