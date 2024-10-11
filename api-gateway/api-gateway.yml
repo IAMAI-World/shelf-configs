@@ -96,6 +96,13 @@ spring:
             - Method=GET,PUT,DELETE,POST
           filters:
             - AddPrincipalToPathFilter
+        - id: strategy
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/strategy/chats
+            - Method=GET,PUT,DELETE,POST
+          filters:
+            - AddPrincipalToPathFilter
         - id: multimedia
           uri: http://localhost:8097
           predicates:

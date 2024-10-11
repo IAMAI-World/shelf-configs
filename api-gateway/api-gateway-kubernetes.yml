@@ -58,6 +58,13 @@ spring:
             - Method=GET,PUT,DELETE,POST
           filters:
             - AddPrincipalToPathFilter
+        - id: strategy
+          uri: http://profiles
+          predicates:
+            - Path=/api/v1/strategy/chats
+            - Method=GET,PUT,DELETE,POST
+          filters:
+            - AddPrincipalToPathFilter
         - id: multimedia
           uri: http://multimedia-manager
           predicates:
