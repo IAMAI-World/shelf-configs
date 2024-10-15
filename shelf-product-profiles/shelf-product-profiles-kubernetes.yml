@@ -2,7 +2,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
   datasource:
-    url: jdbc:postgresql://database.cohlzmdxm7m5.eu-north-1.rds.amazonaws.com:5432/shelf-product-dev?ssl=false
+    url: jdbc:postgresql://database.cohlzmdxm7m5.eu-north-1.rds.amazonaws.com:5432/shelf-product?ssl=false
     username: postgres
     password: '{cipher}c811355a418927927afbbd16c18e02042ea4b1356e5e8495abad8d72c4ee30fa9112e838fe06cf3794678e8bff5e06ea'
     hikari:
