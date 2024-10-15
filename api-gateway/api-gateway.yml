@@ -43,21 +43,21 @@ spring:
         - id: profiles
           uri: http://localhost:8080
           predicates:
-            - Path=/api/v1/profiles/*/languages, /api/v1/employees/*/skills, /api/v1/employees/*/competency, /api/v1/employees/*/assignment, /api/v1/employees/*/personal-details, /api/v1/employees/*/dashboard-layout, /api/v1/profiles/*, /api/v1/agencies-by-name, /api/v1/get-agencies-names, /api/v1/profiles/*/userCV, /api/v1/profiles/average-profile-percentage, /api/v1/profiles
+            - Path=/api/v1/profiles, /api/v1/profiles/*/languages, /api/v1/profiles/*/skills/endorsements, /api/v1/employees/*/skills, /api/v1/employees/*/competency, /api/v1/employees/*/assignment, /api/v1/employees/*/personal-details, /api/v1/employees/*/dashboard-layout, /api/v1/profiles/*, /api/v1/departments-by-name, /api/v1/get-departments-names, /api/v1/profiles/*/userCV, /api/v1/profiles/average-profile-percentage, /api/v1/profiles
             - Method=GET,PUT,PATCH,DELETE,POST
           filters:
             - AddPrincipalToPathFilter
         - id: projects
           uri: http://localhost:8080
           predicates:
-            - Path=/api/v1/projects, /api/v1/projects/archived, /api/v1/projects/*, /api/v1/projects/*/team, /api/v1/projects/milestone/*/sub-milestone/*/mark, /api/v1/projects/milestone/*/mark, /api/v1/projects/assigned-team/*/employees, /api/v1/projects/setup, /api/v1/projects/assistant, /api/v1/projects/roles/assistant, /api/v1/projects/assistant/summarizing, /api/v1/projects/milestone/assistant/summarizing, /api/v1/projects/role/assistant, /api/v1/projects/*/team, /api/v1/projects/*/team, /api/v1/projects/team/users, /api/v1/projects/team/generate-additional-matches, /api/v1/projects/*/milestones, /api/v1/projects/assigned-team/*/employees/*, /api/v1/projects/team/*, /api/v1/projects/team/*/*, /api/v1/projects/team/generate-salary, /api/v1/projects/*/past
+            - Path=/api/v1/role/info/*, /api/v1/projects, /api/v1/projects/archived, /api/v1/projects/*, /api/v1/projects/*/team, /api/v1/projects/milestone/*/sub-milestone/*/mark, /api/v1/projects/milestone/*/mark, /api/v1/projects/assigned-team/*/employees, /api/v1/projects/setup, /api/v1/projects/assistant, /api/v1/projects/roles/assistant, /api/v1/projects/assistant/summarizing, /api/v1/projects/milestone/assistant/summarizing, /api/v1/projects/role/assistant, /api/v1/projects/*/team, /api/v1/projects/*/team, /api/v1/projects/team/users, /api/v1/projects/team/generate-additional-matches, /api/v1/projects/*/milestones, /api/v1/projects/assigned-team/*/employees/*, /api/v1/projects/team/*, /api/v1/projects/team/*/*, /api/v1/projects/team/generate-salary, /api/v1/projects/*/past, /api/v1/projects/*/assigned-team, /api/v1/projects/*/milestones, /api/v1/projects/*/stage
             - Method=GET,PUT,PATCH,DELETE,POST
           filters:
             - AddPrincipalToPathFilter
         - id: positions
           uri: http://localhost:8080
           predicates:
-            - Path=/api/v1/positions, /api/v1/positions/*, /api/v1/positions/archived, /api/positions/projects/*, /api/v1/positions/*/matched-employees, /api/v1/positions/description, /api/v1/matches/*, /api/v1/matches/*/matched-employees, /api/v1/roles/assistant, /api/v1/roles/assistant/summarizing, /api/v1/roles/assistant/summarizing, /api/v1/positions/assistant, /api/v1/positions/assistant/summarizing, /api/v1/positions/matched-employees, /api/v1/positions/*/match/*, /api/v1/positions/*/matched-employees/*, /api/v1/matches, /api/v1/matches/matched-employees, /api/v1/positions/generate-salary
+            - Path=/api/v1/positions, /api/v1/positions/*, /api/v1/positions/archived, /api/positions/projects/*, /api/v1/positions/*/matched-employees, /api/v1/positions/description, /api/v1/matches/*, /api/v1/matches/*/matched-employees, /api/v1/roles/assistant, /api/v1/roles/assistant/summarizing, /api/v1/roles/assistant/summarizing, /api/v1/positions/assistant, /api/v1/positions/assistant/summarizing, /api/v1/positions/matched-employees, /api/v1/positions/*/match/*, /api/v1/positions/*/matched-employees/*, /api/v1/matches, /api/v1/matches/matched-employees, /api/v1/positions/generate-salary, /api/v1/positions/*/visibility
             - Method=GET,PUT,DELETE,POST
           filters:
             - AddPrincipalToPathFilter
@@ -78,7 +78,7 @@ spring:
         - id: company
           uri: http://localhost:8080
           predicates:
-            - Path=/api/v1/company-info, /api/v1/admins/*, /api/v1/admins, /api/v1/average-characteristics, /api/v1/gender-balance, /api/v1/age-statistics, /api/v1/name-search, /api/v1/department-profile/*, /api/v1/department-profiles-upload, /api/v1/general-dashboard-information, /api/v1/agencies-managers, /api/v1/department, /api/v1/department/*, /api/v1/roles, /api/v1/users-count, /api/v1/employees/dynamic-search, /api/v1/recent-actions, /api/v1/aspiration/personal-characteristics, /api/v1/aspiration/employees-age, /api/v1/aspiration/gender-balance, /api/v1/aspiration/departments, /api/v1/aspiration/gender-balance, /api/v1/aspiration/employees-age, /api/v1/aspiration/personal-characteristics, /api/v1/aspiration/employees-age, /api/v1/departments, /api/v1/skill-options          
+            - Path=/api/v1/company-info, /api/v1/admins/*, /api/v1/admins, /api/v1/average-characteristics, /api/v1/gender-balance, /api/v1/age-statistics, /api/v1/name-search, /api/v1/department-profile/*, /api/v1/department-profiles-upload, /api/v1/general-dashboard-information, /api/v1/department-managers, /api/v1/department, /api/v1/department/*, /api/v1/roles, /api/v1/users-count, /api/v1/employees/dynamic-search, /api/v1/recent-actions, /api/v1/aspiration/personal-characteristics, /api/v1/aspiration/employees-age, /api/v1/aspiration/gender-balance, /api/v1/aspiration/departments, /api/v1/aspiration/gender-balance, /api/v1/aspiration/employees-age, /api/v1/aspiration/personal-characteristics, /api/v1/aspiration/employees-age, /api/v1/departments, /api/v1/skill-options          
             - Method=GET,PUT,DELETE,POST,PATCH
           filters:
             - AddPrincipalToPathFilter
@@ -93,6 +93,13 @@ spring:
           uri: http://localhost:8080
           predicates:
             - Path=/api/v1/feedback/projects/*/employees/*, /api/v1/feedback/projects/*/employees, /api/v1/feedback/projects/*, /api/v1/feedback/employees/*
+            - Method=GET,PUT,DELETE,POST
+          filters:
+            - AddPrincipalToPathFilter
+        - id: strategy
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/strategy/chats, /api/v1/strategy/project/suggestion/*, /api/v1/strategy/projects
             - Method=GET,PUT,DELETE,POST
           filters:
             - AddPrincipalToPathFilter
