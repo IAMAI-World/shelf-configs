@@ -61,7 +61,7 @@ spring:
         - id: strategy
           uri: http://profiles
           predicates:
-            - Path=/api/v1/strategy/chats, /api/v1/strategy/project/suggestion
+            - Path=/api/v1/strategy/chats, /api/v1/strategy/project/suggestion/*, /api/v1/strategy/projects
             - Method=GET,PUT,DELETE,POST
           filters:
             - AddPrincipalToPathFilter
