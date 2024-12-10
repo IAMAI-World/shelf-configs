@@ -33,7 +33,7 @@ spring:
         - id: dream-roles
           uri: http://profiles
           predicates:
-            - Path=/api/v1/dream-roles, /api/v1/dream-roles/*, /api/v1/dream-roles/*/interest, /api/v1/dream-roles/interested/*, /api/v1/dream-roles/*/applicants, /api/v1/dream-roles/assistant, /api/v1/dream-roles/assistant/summarizing
+            - Path=/api/v1/dream-roles, /api/v1/dream-roles/*, /api/v1/dream-roles/*/interest, /api/v1/dream-roles/interested/*, /api/v1/dream-roles/*/applicants, /api/v1/dream-roles/assistant, /api/v1/dream-roles/assistant/summarizing, /api/v1/dream-roles/*/applications
             - Method=GET,PUT,DELETE,POST
           filters:
             - AddPrincipalToPathFilter
