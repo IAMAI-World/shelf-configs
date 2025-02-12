@@ -43,7 +43,7 @@ spring:
         - id: profiles
           uri: http://localhost:8080
           predicates:
-            - Path=/api/v1/profiles, /api/v1/profiles/*/languages, /api/v1/profiles/*/skills/endorsements, /api/v1/employees/*/skills, /api/v1/employees/*/competency, /api/v1/employees/*/assignment, /api/v1/employees/*/personal-details, /api/v1/employees/*/dashboard-layout, /api/v1/profiles/*, /api/v1/departments-by-name, /api/v1/get-departments-names, /api/v1/profiles/*/userCV, /api/v1/profiles/average-profile-percentage, /api/v1/profiles
+            - Path=/api/v1/profiles, /api/v1/profiles/*/languages, /api/v1/profiles/*/skills/endorsements, /api/v1/employees/*/skills, /api/v1/employees/*/competency, /api/v1/employees/*/assignment, /api/v1/employees/*/personal-details, /api/v1/employees/*/dashboard-layout, /api/v1/profiles/*, /api/v1/departments-by-name, /api/v1/get-departments-names, /api/v1/profiles/*/userCV, /api/v1/profiles/average-profile-percentage, /api/v1/employees/*/recent-actions
             - Method=GET,PUT,PATCH,DELETE,POST
           filters:
             - AddPrincipalToPathFilter
