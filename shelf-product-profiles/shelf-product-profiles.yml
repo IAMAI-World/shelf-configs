@@ -33,7 +33,7 @@ spring:
     host: smtp.mandrillapp.com
     port: 587
     username: IAMAI
-    password: '{cipher}d15cbab8eabc819064cee5e7649b78298814bc0a6f4ad27e823b93d1fdf4e5ac33183a8377f0200c6c830e667592c5f0'
+    password: '{cipher}6291ca54ce60a94f45cb736e4e4deb6927279f379072a0d16f79f1f66eb1ab2f3bc2c25f51ddb0802e9c90e9027a2c35'
     admin: gladiypavlo@gmail.com
     base-link: https://dashboard.iamaiworld.ai/user/
     properties:
@@ -75,3 +75,6 @@ keycloak-client:
 aws.accessKey: '{cipher}49ff9515bae71d0606ded65bbc8151fc22537eb3b6074e2ea535913aa0b8ca0f799e691668ac1b41cb752a99d9ba557d'
 aws.secretKey: '{cipher}bf90b6127ae911113f1285fed824ba30c3a0f493982a996104d3a8b350aad0fe9ccbe7cf6089391090e6f1c48b97a53a0b2ba0479e427d279a863a04e97ec1ef'
 openai.Key: '{cipher}9ef35231e0ebdfda014311061e689fc648a2d8670d4e04bcf8fdb4263a532626234db68da2bfda86335d3f065abcc941e6e067a8d0dcbd7e70830f78fc43a77b3ed70681def4523a4c10471f094b4831'
+stripe.Key: '{cipher}0370b700816407b5614dce89591f41b4c175b626176e9c8a3406a22983d008aedb1fbceadc366e3c0630c034297bbb1e0856aff75b1b7ecf9216ca58ccd6a92503b482d7a3e1d89749e6033e0dc5499456b225b20f7b5eac5b81aea05b6b8c2194ca7fa978daff543a010f9b33115f6cb30c12d5e0ad67b42ad848b54f68ab49'
+stripe.Product: '{cipher}cff232055e934fca7aa5c4b53afe887642d5e5c0a30ab9a4bb4db0cc806f20a9ee33b85951f1d8522ff442c06112e551'
+stripe.userPrice: '{cipher}503dae5f666411f4dc133eeb7de7bba0dfd2f552754833bb86c8da1fd9f4f1868846e37c1b24b2f81da1f725ad410301'
