@@ -57,7 +57,7 @@ spring:
         - id: positions
           uri: http://localhost:8080
           predicates:
-            - Path=/api/v1/positions, /api/v1/positions/*, /api/v1/positions/archived, /api/positions/projects/*, /api/v1/positions/*/matched-employees, /api/v1/positions/description, /api/v1/matches/*, /api/v1/matches/*/matched-employees, /api/v1/roles/assistant, /api/v1/roles/assistant/summarizing, /api/v1/roles/assistant/summarizing, /api/v1/positions/assistant, /api/v1/positions/assistant/summarizing, /api/v1/positions/matched-employees, /api/v1/positions/*/match/*, /api/v1/positions/*/matched-employees/*, /api/v1/matches, /api/v1/matches/matched-employees, /api/v1/positions/generate-salary, /api/v1/positions/*/visibility
+            - Path=/api/v1/positions, /api/v1/positions/*, /api/v1/positions/archived, /api/positions/projects/*, /api/v1/positions/*/matched-employees, /api/v1/positions/description, /api/v1/matches/*, /api/v1/matches/*/matched-employees, /api/v1/roles/assistant, /api/v1/roles/assistant/summarizing, /api/v1/roles/assistant/summarizing, /api/v1/positions/assistant, /api/v1/positions/assistant/summarizing, /api/v1/positions/matched-employees, /api/v1/positions/*/match/*, /api/v1/positions/*/matched-employees/*, /api/v1/matches, /api/v1/matches/matched-employees, /api/v1/positions/generate-salary, /api/v1/positions/*/visibility, /api/v1/positions/*/match/*/notify
             - Method=GET,PUT,DELETE,POST
           filters:
             - AddPrincipalToPathFilter
