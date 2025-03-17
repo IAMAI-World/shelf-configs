@@ -67,6 +67,7 @@ health:
 server.servlet.encoding.charset: UTF-8
 server.servlet.encoding.force-response: true
 web.base-url: https://dashboard.iamaiworld.ai/
+web.url: https://dashboard.iamaiworld.ai
 api.base-url: https://api-dashboard.iamaiworld.ai/api/v1
 fileClient.url: https://api-dashboard.iamaiworld.ai
 keycloak-client:
