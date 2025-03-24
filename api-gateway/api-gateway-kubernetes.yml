@@ -44,6 +44,13 @@ spring:
             - Method=GET,PUT,DELETE,POST,PATCH
           filters:
             - AddPrincipalToPathFilter
+        - id: widgets
+          uri: http://profiles
+          predicates:
+            - Path=/api/v1/widgets
+            - Method=GET,PUT,DELETE,POST
+          filters:
+            - AddPrincipalToPathFilter
         - id: chats
           uri: http://profiles
           predicates:

@@ -82,6 +82,13 @@ spring:
             - Method=GET,PUT,DELETE,POST,PATCH
           filters:
             - AddPrincipalToPathFilter
+        - id: widgets
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/widgets
+            - Method=GET,PUT,DELETE,POST
+          filters:
+            - AddPrincipalToPathFilter
         - id: chats
           uri: http://localhost:8080
           predicates:
