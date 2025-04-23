@@ -80,3 +80,4 @@ stripe.Key: '{cipher}61705bd104f9cadc2996970b8e3f782fc4ceaf0046e16fbd10ed56cae8b
 stripe.Product: '{cipher}babfc5c07e349e2db697c9d4656a890b91344e070a88575ef086e8e3066c2ba84f463f9c9e97913d28031c724afd249f'
 stripe.fixedPrice: '{cipher}7c8c3c617ae99ac883c0fb081daed687110e52dae132cd31c1d7f17658e39e429bf719d0f759cc7afea7ba5f53318f32'
 stripe.userPrice: '{cipher}12c1587ed77f02b6c42bd693376a8d618a58649b835b447e4abc33c3cdff89cf3f8ab2fd1f853da04938177039dc90f6'
+sync.url: https://api-preprod.iamaiworld.ai/api/v1/employees/sync
