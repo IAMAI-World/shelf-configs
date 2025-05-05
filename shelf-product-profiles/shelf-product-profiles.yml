@@ -79,3 +79,8 @@ openai.Key: '{cipher}9ef35231e0ebdfda014311061e689fc648a2d8670d4e04bcf8fdb4263a5
 stripe.Key: '{cipher}0370b700816407b5614dce89591f41b4c175b626176e9c8a3406a22983d008aedb1fbceadc366e3c0630c034297bbb1e0856aff75b1b7ecf9216ca58ccd6a92503b482d7a3e1d89749e6033e0dc5499456b225b20f7b5eac5b81aea05b6b8c2194ca7fa978daff543a010f9b33115f6cb30c12d5e0ad67b42ad848b54f68ab49'
 stripe.Product: '{cipher}cff232055e934fca7aa5c4b53afe887642d5e5c0a30ab9a4bb4db0cc806f20a9ee33b85951f1d8522ff442c06112e551'
 stripe.userPrice: '{cipher}cb7785bd159e10910009cd692e03a2d0b91fd45400afef57c9dd94820ce7c0100229a2585fcb7c970de896a154a95647'
+sync.url: https://api-preprod.iamaiworld.ai/api/v1/employees/sync
+openai.apiUrl: https://api.openai.com/v1/chat/completions
+openai.embeddingsApiUrl: https://api.openai.com/v1/embeddings
+groq.apiUrl: https://api.groq.com/openai/v1/chat/completions
+groq.Key: '{cipher}b5d835f21f3e3dd52466b46f6c54fde678cce81911eae0eb0a5f1fe59f59e86e2ece0403f8f469dce280b4f894569a8a5a7d97a44962a846682a248902b79448884fb7e8ef48774acd3a838206e52fb4'
