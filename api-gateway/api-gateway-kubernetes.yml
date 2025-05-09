@@ -68,7 +68,7 @@ spring:
         - id: strategy
           uri: http://profiles
           predicates:
-            - Path=/api/v1/strategy, /api/v1/strategy/chats, /api/v1/strategy/chats/*, /api/v1/strategy/projects/suggestion/*, /api/v1/strategy/projects, /api/v1/update-news, /api/v1/news, /api/v1/news/tags, /api/v1/strategy/news/insight, /api/v1/strategy/swot, /api/v1/strategy/chats/{chatId}/highlights, /api/v1/strategy/highlights/location, /api/v1/strategy/insight, /api/v1/strategy/revert, /api/v1/strategy/chats/*/collaborators, /api/v1/strategy/chats/*/collaborators/requests, /api/v1/strategy/created, /api/v1/strategy/*, /api/v1/strategy/*/main, /api/v1/strategy/swot, /api/v1/strategy/chats/*/rename, /api/v1/strategy/model/pick, /api/v1/strategy/*/files, /api/v1/strategy/*/files/*
+            - Path=/api/v1/strategy, /api/v1/strategy/chats, /api/v1/strategy/chats/*, /api/v1/strategy/projects/suggestion/*, /api/v1/strategy/projects, /api/v1/update-news, /api/v1/news, /api/v1/news/tags, /api/v1/strategy/news/insight, /api/v1/strategy/swot, /api/v1/strategy/chats/{chatId}/highlights, /api/v1/strategy/highlights/location, /api/v1/strategy/insight, /api/v1/strategy/revert, /api/v1/strategy/chats/*/collaborators, /api/v1/strategy/chats/*/collaborators/requests, /api/v1/strategy/created, /api/v1/strategy/*, /api/v1/strategy/*/main, /api/v1/strategy/swot, /api/v1/strategy/chats/*/rename, /api/v1/strategy/model/pick, /api/v1/strategy/*/files, /api/v1/strategy/*/files/*, /api/v1/strategy/*/projects/links, /api/v1/strategy/*/projects/options, /api/v1/strategy/*/projects/*
             - Method=GET,PUT,DELETE,POST,PATCH
           filters:
             - AddPrincipalToPathFilter
