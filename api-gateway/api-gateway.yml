@@ -111,12 +111,12 @@ spring:
           filters:
             - AddPrincipalToPathFilter
         - id: kleer
-            uri: http://localhost:8080
-            predicates:
-              - Path=/api/v1/kleer/transactions, /api/v1/kleer/sync-stripe-balance-transactions
-              - Method=GET,POST
-            filters:
-              - AddPrincipalToPathFilter
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/kleer/transactions, /api/v1/kleer/sync-stripe-balance-transactions
+            - Method=GET,POST
+          filters:
+            - AddPrincipalToPathFilter
         - id: multimedia
           uri: http://localhost:8097
           predicates:
