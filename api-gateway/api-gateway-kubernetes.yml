@@ -72,6 +72,13 @@ spring:
             - Method=GET,PUT,DELETE,POST,PATCH
           filters:
             - AddPrincipalToPathFilter
+        - id: kleer
+          uri: http://profiles
+          predicates:
+            - Path=/api/v1/kleer/transactions, /api/v1/kleer/sync-stripe-balance-transactions
+            - Method=GET,POST
+          filters:
+            - AddPrincipalToPathFilter
         - id: multimedia
           uri: http://multimedia-manager
           predicates:

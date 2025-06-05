@@ -85,3 +85,6 @@ openai.apiUrl: https://api.openai.com/v1/chat/completions
 openai.embeddingsApiUrl: https://api.openai.com/v1/embeddings
 groq.apiUrl: https://api.groq.com/openai/v1/chat/completions
 groq.Key: '{cipher}b5d835f21f3e3dd52466b46f6c54fde678cce81911eae0eb0a5f1fe59f59e86e2ece0403f8f469dce280b4f894569a8a5a7d97a44962a846682a248902b79448884fb7e8ef48774acd3a838206e52fb4'
+kleer:
+  api-token: '{cipher}8e946a82808a328af8e344287889d1684f7b1f1b2a435d6561b191b409d0e21e'
+  company-id: '{cipher}7df1731e8adcfbb71e84b7839142ed94f624b447f99e7a00ff7693d96b687d1a'
