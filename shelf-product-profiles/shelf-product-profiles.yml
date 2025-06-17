@@ -2,6 +2,7 @@ spring.servlet.multipart.max-file-size: 1000MB
 spring.servlet.multipart.max-request-size: 1000MB
 spring.cloud.gateway.httpclient.codec.multipart.enabled: true
 spring.cloud.gateway.httpclient.max-request-size: 1000MB
+spring.jpa.properties.hibernate.order_by.default_null_ordering: last
 server:
   forward-headers-strategy: framework
 spring:
