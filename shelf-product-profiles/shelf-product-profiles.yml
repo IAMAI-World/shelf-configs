@@ -87,3 +87,5 @@ groq.apiUrl: https://api.groq.com/openai/v1/chat/completions
 groq.Key: '{cipher}b5d835f21f3e3dd52466b46f6c54fde678cce81911eae0eb0a5f1fe59f59e86e2ece0403f8f469dce280b4f894569a8a5a7d97a44962a846682a248902b79448884fb7e8ef48774acd3a838206e52fb4'
 kleer.api-token: '{cipher}3683d1b78b0f5511b1b7df548bd7ba710d39688365604a2e07998bae858826fa'
 kleer.company-id: '{cipher}e9f2c3532106592f2eb6573c19b06d47c39f6edff06b6803c2780abf3c8fdd26'
+perplexity.apiUrl: https://api.perplexity.ai/chat/completions
+perplexity.Key: '{cipher}33ee757c8f77542cde342abfa75aa0409cfc066e903d9728d457f91776011cd38401f9957407bb533ecf3411b63a94289bd4716bf7345db0e2680c7603b0f33550cee02fb3ac6ef12ff08e8be778a7cf'
