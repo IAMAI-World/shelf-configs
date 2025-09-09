@@ -92,7 +92,7 @@ spring:
         - id: chats
           uri: http://localhost:8080
           predicates:
-            - Path=/api/v1/chats, /api/v1/chats/*, /api/v1/employees/*/chats, /api/v1/chats/*/recent, /api/v1/chats/messages/*, /api/v1/assistant, /api/v1/assistant/prompts
+            - Path=/api/v1/chats, /api/v1/chats/*, /api/v1/employees/*/chats, /api/v1/chats/*/recent, /api/v1/chats/messages/*, /api/v1/assistant, /api/v1/assistant/prompts, /api/v1/assistant/models/options
             - Method=GET,PUT,DELETE,POST,PATCH
           filters:
             - AddPrincipalToPathFilter
