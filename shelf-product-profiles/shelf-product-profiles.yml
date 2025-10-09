@@ -90,3 +90,5 @@ kleer.api-token: '{cipher}3683d1b78b0f5511b1b7df548bd7ba710d39688365604a2e07998b
 kleer.company-id: '{cipher}e9f2c3532106592f2eb6573c19b06d47c39f6edff06b6803c2780abf3c8fdd26'
 perplexity.apiUrl: https://api.perplexity.ai/chat/completions
 perplexity.Key: '{cipher}33ee757c8f77542cde342abfa75aa0409cfc066e903d9728d457f91776011cd38401f9957407bb533ecf3411b63a94289bd4716bf7345db0e2680c7603b0f33550cee02fb3ac6ef12ff08e8be778a7cf'
+gnews.apiKey: '{cipher}9f85cf43022b2cf4b705181efcf9e18349af5fe6f3d462988bf6cce8c964cf23ed78d01fa4dea440567398f4912c7f8d24071cb272f39556f790049a480ad13e'
+gnews.apiUrl: 'https://gnews.io/api/v4/search'
