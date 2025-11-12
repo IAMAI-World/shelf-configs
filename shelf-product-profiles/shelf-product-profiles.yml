@@ -91,3 +91,10 @@ perplexity.apiUrl: https://api.perplexity.ai/chat/completions
 perplexity.Key: '{cipher}33ee757c8f77542cde342abfa75aa0409cfc066e903d9728d457f91776011cd38401f9957407bb533ecf3411b63a94289bd4716bf7345db0e2680c7603b0f33550cee02fb3ac6ef12ff08e8be778a7cf'
 gnews.apiKey: '{cipher}9f85cf43022b2cf4b705181efcf9e18349af5fe6f3d462988bf6cce8c964cf23ed78d01fa4dea440567398f4912c7f8d24071cb272f39556f790049a480ad13e'
 gnews.apiUrl: 'https://gnews.io/api/v4/search'
+sentry:
+  dsn: '{cipher}2064cfb52b51f873f42167fe3baf4911fff9aeb618a775cd03dc007b3e9642b8c2c0d671687ae3783a5964a7b492ad1ba3b81fefe4805dbd96fc8f76505ef973f31a3fe67dface095eb79c8e7eb4e6ffefa89c6c629f033d2d1f5ab6ff1e003188242e521cc20365432b41680d3585d9'
+  environment: dev
+  release: 1.0.0
+  traces-sample-rate: 0.5
+  send-default-pii: false
+  enable-tracing: true
