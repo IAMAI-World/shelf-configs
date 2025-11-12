@@ -93,7 +93,7 @@ gnews.apiKey: '{cipher}9f85cf43022b2cf4b705181efcf9e18349af5fe6f3d462988bf6cce8c
 gnews.apiUrl: 'https://gnews.io/api/v4/search'
 sentry:
   dsn: '{cipher}2064cfb52b51f873f42167fe3baf4911fff9aeb618a775cd03dc007b3e9642b8c2c0d671687ae3783a5964a7b492ad1ba3b81fefe4805dbd96fc8f76505ef973f31a3fe67dface095eb79c8e7eb4e6ffefa89c6c629f033d2d1f5ab6ff1e003188242e521cc20365432b41680d3585d9'
-  environment: dev
+  environment: prod
   release: 1.0.0
   traces-sample-rate: 0.5
   send-default-pii: false
