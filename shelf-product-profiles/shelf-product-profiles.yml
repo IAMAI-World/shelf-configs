@@ -98,3 +98,5 @@ sentry:
   traces-sample-rate: 0.5
   send-default-pii: false
   enable-tracing: true
+customerIO.Username: '{cipher}bf108ca65f50e457218d002e3abd9d33286998d1006680b592351be1607fb6941b1a60589679142218f4edb73fff49fe'
+customerIO.Password: '{cipher}d1d347b4ce084700aa880177a0e88aa81ea49887d6050df534627265764ae3f0d06e8f6088f7528019536eb435f4ad4b'
