@@ -83,6 +83,7 @@ spring:
           uri: http://multimedia-manager
           predicates:
             - Path=/api/v1/multimedia, /api/v1/multimedia/**
+            - Method=GET,DELETE,POST
         - id: openapi
           uri: http://api-gateway
           predicates:

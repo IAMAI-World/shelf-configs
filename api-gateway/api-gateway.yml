@@ -121,6 +121,7 @@ spring:
           uri: http://localhost:8097
           predicates:
             - Path=/api/v1/multimedia, /api/v1/multimedia-manager/**
+            - Method=GET,DELETE,POST
         - id: openapi
           uri: http://localhost:8081
           predicates:

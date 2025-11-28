@@ -70,7 +70,7 @@ server.servlet.encoding.force-response: true
 web.base-url: https://dashboard-dev.iamaiworld.ai/
 web.url: https://dev-dashboard.iamaiworld.ai
 api.base-url: https://api-dashboard-dev.iamaiworld.ai/api/v1
-fileClient.url: https://api-dashboard-dev.iamaiworld.ai
+fileClient.url: https://api-shelf-dev.iamaiworld.ai
 keycloak-client:
   server-url: https://auth-dashboard-dev.iamaiworld.ai/auth
   realm: dashboard
