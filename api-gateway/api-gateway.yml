@@ -43,7 +43,7 @@ spring:
         - id: profiles
           uri: http://localhost:8080
           predicates:
-            - Path=/api/v1/profiles/*, /api/v1/employees, /api/v1/employees/*/languages, /api/v1/employees/*/skills/endorsements, /api/v1/employees/*/skills, /api/v1/employees/*/skills/suggested, /api/v1/employees/*/competency, /api/v1/employees/*/assignment, /api/v1/employees/*/personal-details, /api/v1/employees/*/dashboard-layout, /api/v1/employees/*, /api/v1/departments/statistics, /api/v1/employees/*/cv, /api/v1/employees/*/recent-actions, /api/v1/employees/assistant/summarizing, /api/v1/employees/*/company, /api/v1/employees/*/skills/suggested, /api/v1/employees/*/skills/suggested/batch, /api/v1/employees/sync, /api/v1/employees/*/assignments
+            - Path=/api/v1/profiles/*, /api/v1/employees, /api/v1/employees/*/languages, /api/v1/employees/*/skills/endorsements, /api/v1/employees/*/skills, /api/v1/employees/*/skills/suggested, /api/v1/employees/*/competency, /api/v1/employees/*/assignment, /api/v1/employees/*/personal-details, /api/v1/employees/*/dashboard-layout, /api/v1/employees/*, /api/v1/departments/statistics, /api/v1/employees/*/cv, /api/v1/employees/*/recent-actions, /api/v1/employees/assistant/summarizing, /api/v1/employees/*/company, /api/v1/employees/*/skills/suggested, /api/v1/employees/*/skills/suggested/batch, /api/v1/employees/sync, /api/v1/employees/*/assignments, /api/v1/employees/*/contact
             - Method=GET,PUT,PATCH,DELETE,POST
           filters:
             - AddPrincipalToPathFilter
