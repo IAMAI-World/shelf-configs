@@ -40,6 +40,13 @@ spring:
         locator:
           enabled: false
       routes:
+        - id: dashboard
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/dashboard/kpis, /api/v1/dashboard/kpis/*/trajectory, /api/v1/dashboard/kpis/*/trajectory/reported
+            - Method=GET,PUT,PATCH,DELETE,POST
+          filters:
+            - AddPrincipalToPathFilter
         - id: profiles
           uri: http://localhost:8080
           predicates:
