@@ -113,3 +113,6 @@ anthropic.apiUrl: 'https://api.anthropic.com/v1/messages'
 anthropic.apiKey: '{cipher}d7ce31a17859eb1f2381f756ea776f9ece5fee6b0b3d2f09351dd04e2c17f03ac56f223cf544de5fc9ecdeebafccde0f9dee8275a46c807cf578dcdcf5bfe37af00b969eabe5b1577bcd7326835d9767ef83c2423c6d6b790504070e5344e98af8f6a2066bcb5f3e37221b46dfe34ee2838ffbfc5e5e79151b55c3d3b0e0b317'
 newsdatahub.apiKey: '{cipher}d2d7a4acb29bef69d8f4fd3f53674dc5146baf54cd93f04105ec8acd05e7088ae60cea607e1b3bc20977d4e3d81d64eedb121261b5cceeb73041c02aac6940b6'
 newsdatahub.apiUrl: 'https://api.newsdatahub.com/v1/news'
+migration:
+  workspaces:
+    generate-profiles: true
