@@ -23,6 +23,11 @@ spring:
           queries: true
           ehcache:
             missing_cache_strategy: create
+        jdbc:
+          batch_size: 50
+        order_inserts: true
+        order_updates: true
+    open-in-view: false
     database-platform: org.hibernate.dialect.PostgreSQL9Dialect
     show-sql: true
     hibernate:
