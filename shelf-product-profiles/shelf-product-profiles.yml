@@ -116,3 +116,7 @@ newsdatahub.apiUrl: 'https://api.newsdatahub.com/v1/news'
 migration:
   workspaces:
     generate-profiles: true
+ai:
+  overviews:
+    projectChat:
+      enabled: true
