@@ -62,7 +62,7 @@ web.url: https://dev-dashboard.iamaiworld.ai
 api.base-url: https://api-dashboard-dev.iamaiworld.ai/api/v1
 fileClient.url: https://api-shelf-dev.iamaiworld.ai
 keycloak-client:
-  server-url: https://auth-preprod.iamaiworld.a/auth
+  server-url: https://auth-preprod.iamaiworld.ai/auth
   realm: iamai
 aws.accessKey: '{cipher}36080fc49b5c62ca98b058a594e6a730e3912b3bbce706dc20c7f0f27c15ca58d96ca424599615a121a710743b9baa35'
 aws.secretKey: '{cipher}9f38d8429261f5de78bc6ed9e5435d2413ecc5a9689266671c832f742489c0490e623f4197263bfff0045e9b6e1224c0f37a839d0b9c5a6c25c1b27934d86e62'
