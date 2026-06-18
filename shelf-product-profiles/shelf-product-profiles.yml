@@ -64,6 +64,14 @@ fileClient.url: https://api-shelf-dev.iamaiworld.ai
 keycloak-client:
   server-url: https://auth-dashboard-dev.iamaiworld.ai/auth
   realm: iamai
+iamai-service:
+  api-url: http://localhost:8082/api/v1
+feign:
+  client:
+    config:
+      iamai-client:
+        connectTimeout: 5000
+        readTimeout: 60000
 aws.accessKey: '{cipher}36080fc49b5c62ca98b058a594e6a730e3912b3bbce706dc20c7f0f27c15ca58d96ca424599615a121a710743b9baa35'
 aws.secretKey: '{cipher}9f38d8429261f5de78bc6ed9e5435d2413ecc5a9689266671c832f742489c0490e623f4197263bfff0045e9b6e1224c0f37a839d0b9c5a6c25c1b27934d86e62'
 openai.Key: '{cipher}9ef35231e0ebdfda014311061e689fc648a2d8670d4e04bcf8fdb4263a532626234db68da2bfda86335d3f065abcc941e6e067a8d0dcbd7e70830f78fc43a77b3ed70681def4523a4c10471f094b4831'
@@ -102,9 +110,6 @@ newsdatahub.apiUrl: 'https://api.newsdatahub.com/v1/news'
 exchangerate.apiUrl: 'https://v6.exchangerate-api.com/v6/${exchangerate.apiKey}/pair'
 exchangerate.apiKey: '{cipher}5eaefa3cb9dffe56d3b6f62359acf229e3b2ed8d7697454fb07833d46b53b7e08090c5e53ab0a9a8fe4a6783e9cd86ec'
 frankfurter.apiUrl: 'https://api.frankfurter.dev/v2/rates'
-migration:
-  workspaces:
-    generate-profiles: true
 ai:
   overviews:
     projectChat:
