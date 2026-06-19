@@ -65,7 +65,7 @@ keycloak-client:
   server-url: https://auth-dashboard-dev.iamaiworld.ai/auth
   realm: iamai
 iamai-service:
-  api-url: http://localhost:8082/api/v1
+  api-url: https://api-preprod.iamaiworld.ai/api/v1
 feign:
   client:
     config:
@@ -114,3 +114,8 @@ ai:
   overviews:
     projectChat:
       enabled: true
+iamai-keycloak:
+  server-url: https://auth-preprod.iamaiworld.ai/auth
+  realm: iamai
+  client-id: sync
+  client-secret: '{cipher}b9c2ec7b14e24beebfe84a6a6e5685ddf5a1fd758533d4696d764053595c4199dd50bf3dd4863d837ee0ec3ecd28d85214aeda96fcb950cc94f86f757c7c900b'
