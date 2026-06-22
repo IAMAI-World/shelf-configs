@@ -99,3 +99,4 @@ spring:
             - RewritePath=/v3/api-docs/(?<path>.*), /api/v1//$\{path}/api-doc
 keycloak-client:
   server-url: https://auth-dashboard-dev.iamaiworld.ai/auth
+profiles.base-url: https://api-shelf-dev.iamaiworld.ai
