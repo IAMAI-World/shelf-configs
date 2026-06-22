@@ -187,3 +187,4 @@ springdoc:
 health:
   config:
     enabled: false
+profiles.base-url: https://api-shelf-dev.iamaiworld.ai
