@@ -64,6 +64,11 @@ fileClient.url: https://api-shelf-dev.iamaiworld.ai
 keycloak-client:
   server-url: https://auth-dashboard-dev.iamaiworld.ai/auth
   realm: iamai
+  rest-api:
+    client-id: admin-cli
+    grant-type: password
+    username: '{cipher}eee920480d5f64d9eb6a6f3e955a1bb8e8c45ebf9e2c6942ccb0858da6629875'
+    password: '{cipher}dca4ae0d11ef59b32190efceee7de5d1d04d416831da0e4bcc9d0c4a3e706c5bb98f04da88c614be1dd7a71505ccf563'
 iamai-service:
   api-url: https://api-preprod.iamaiworld.ai/api/v1
 feign:
