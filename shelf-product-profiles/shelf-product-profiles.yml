@@ -131,3 +131,4 @@ aws:
     api:
       url: https://bedrock-mantle.${aws.region}.api.aws/v1/chat/completions
       key: '{cipher}d782a8e2d1524b0e6158f8d7c24c31407ac079a4c96fff25cf91fc26116f2c9aaf9df55c79fdc91f09c00c1bf68d14dc5797a0f19da705c196ded5281e0dbc4a06bb9b492fb21711f95fede4dad5fb77f5a9e3521f7713bd45a712974b4df74897e24f9351beb1840eecb1c105e738409693aa49ed1afafb49e91a5533131d5b9a5e806510fc720169fbdf701de6454e7550ceda345ea0ba594e8c4e02101bf7'
+app.email.consultant: 'ihor.yavoriv@beleven.dev'
