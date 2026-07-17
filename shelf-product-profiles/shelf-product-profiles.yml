@@ -25,6 +25,7 @@ spring:
             missing_cache_strategy: create
         jdbc:
           batch_size: 50
+        default_batch_fetch_size: 50
         order_inserts: true
         order_updates: true
     open-in-view: false
@@ -33,21 +34,6 @@ spring:
     hibernate:
       ddl-auto: update
       naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
-  mail:
-    smtp:
-      timeout: 60000
-    host: smtp.mandrillapp.com
-    port: 587
-    username: IAMAI
-    password: '{cipher}6291ca54ce60a94f45cb736e4e4deb6927279f379072a0d16f79f1f66eb1ab2f3bc2c25f51ddb0802e9c90e9027a2c35'
-    admin: gladiypavlo@gmail.com
-    base-link: https://dashboard.iamaiworld.ai/user/
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
   cloud:
     gateway:
       httpclient:
@@ -78,7 +64,20 @@ api.base-url: https://api-dashboard.iamaiworld.ai/api/v1
 fileClient.url: https://api-dashboard.iamaiworld.ai
 keycloak-client:
   server-url: https://auth-dashboard.iamaiworld.ai/auth
-  realm: dashboard
+  realm: iamai
+  rest-api:
+    client-id: admin-cli
+    grant-type: password
+    username: '{cipher}eee920480d5f64d9eb6a6f3e955a1bb8e8c45ebf9e2c6942ccb0858da6629875'
+    password: '{cipher}dca4ae0d11ef59b32190efceee7de5d1d04d416831da0e4bcc9d0c4a3e706c5bb98f04da88c614be1dd7a71505ccf563'
+iamai-service:
+  api-url: https://api.iamaiworld.ai/api/v1
+feign:
+  client:
+    config:
+      iamai-client:
+        connectTimeout: 5000
+        readTimeout: 60000
 aws.accessKey: '{cipher}36080fc49b5c62ca98b058a594e6a730e3912b3bbce706dc20c7f0f27c15ca58d96ca424599615a121a710743b9baa35'
 aws.secretKey: '{cipher}9f38d8429261f5de78bc6ed9e5435d2413ecc5a9689266671c832f742489c0490e623f4197263bfff0045e9b6e1224c0f37a839d0b9c5a6c25c1b27934d86e62'
 openai.Key: '{cipher}9ef35231e0ebdfda014311061e689fc648a2d8670d4e04bcf8fdb4263a532626234db68da2bfda86335d3f065abcc941e6e067a8d0dcbd7e70830f78fc43a77b3ed70681def4523a4c10471f094b4831'
@@ -87,6 +86,7 @@ stripe.Product: '{cipher}cff232055e934fca7aa5c4b53afe887642d5e5c0a30ab9a4bb4db0c
 stripe.userPrice: '{cipher}cb7785bd159e10910009cd692e03a2d0b91fd45400afef57c9dd94820ce7c0100229a2585fcb7c970de896a154a95647'
 sync.url: https://api-preprod.iamaiworld.ai/api/v1/employees/sync
 openai.apiUrl: https://api.openai.com/v1/chat/completions
+openai.responsesApiUrl: https://api.openai.com/v1/responses
 openai.embeddingsApiUrl: https://api.openai.com/v1/embeddings
 groq.apiUrl: https://api.groq.com/openai/v1/chat/completions
 groq.Key: '{cipher}b5d835f21f3e3dd52466b46f6c54fde678cce81911eae0eb0a5f1fe59f59e86e2ece0403f8f469dce280b4f894569a8a5a7d97a44962a846682a248902b79448884fb7e8ef48774acd3a838206e52fb4'
@@ -112,10 +112,21 @@ anthropic.apiUrl: 'https://api.anthropic.com/v1/messages'
 anthropic.apiKey: '{cipher}d7ce31a17859eb1f2381f756ea776f9ece5fee6b0b3d2f09351dd04e2c17f03ac56f223cf544de5fc9ecdeebafccde0f9dee8275a46c807cf578dcdcf5bfe37af00b969eabe5b1577bcd7326835d9767ef83c2423c6d6b790504070e5344e98af8f6a2066bcb5f3e37221b46dfe34ee2838ffbfc5e5e79151b55c3d3b0e0b317'
 newsdatahub.apiKey: '{cipher}d2d7a4acb29bef69d8f4fd3f53674dc5146baf54cd93f04105ec8acd05e7088ae60cea607e1b3bc20977d4e3d81d64eedb121261b5cceeb73041c02aac6940b6'
 newsdatahub.apiUrl: 'https://api.newsdatahub.com/v1/news'
-migration:
-  workspaces:
-    generate-profiles: false
+exchangerate.apiUrl: 'https://v6.exchangerate-api.com/v6/${exchangerate.apiKey}/pair'
+exchangerate.apiKey: '{cipher}5eaefa3cb9dffe56d3b6f62359acf229e3b2ed8d7697454fb07833d46b53b7e08090c5e53ab0a9a8fe4a6783e9cd86ec'
+frankfurter.apiUrl: 'https://api.frankfurter.dev/v2/rates'
 ai:
   overviews:
     projectChat:
-      enabled: false
+      enabled: true
+iamai-keycloak:
+  server-url: https://auth.iamaiworld.ai/auth
+  realm: iamai
+  client-id: sync
+  client-secret: '{cipher}1330e28f0bf299ba667a6d3a6caa7b65a5088584681329dc740b40670973466be3885db240d43cec6ac4ac80419e4aebd926cb40f91c8493061c560612f190c8'
+aws:
+  region: eu-north-1
+  bedrock:
+    api:
+      url: https://bedrock-mantle.${aws.region}.api.aws/v1/chat/completions
+      key: '{cipher}d782a8e2d1524b0e6158f8d7c24c31407ac079a4c96fff25cf91fc26116f2c9aaf9df55c79fdc91f09c00c1bf68d14dc5797a0f19da705c196ded5281e0dbc4a06bb9b492fb21711f95fede4dad5fb77f5a9e3521f7713bd45a712974b4df74897e24f9351beb1840eecb1c105e738409693aa49ed1afafb49e91a5533131d5b9a5e806510fc720169fbdf701de6454e7550ceda345ea0ba594e8c4e02101bf7'
