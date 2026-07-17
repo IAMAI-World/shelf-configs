@@ -188,10 +188,3 @@ health:
   config:
     enabled: false
 profiles.base-url: https://api-shelf.iamaiworld.ai
-sentry:
-  dsn: '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'
-  environment: gateway
-  release: 1.0.0
-  traces-sample-rate: 0.5
-  send-default-pii: false
-  enable-tracing: true
