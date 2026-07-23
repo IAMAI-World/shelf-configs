@@ -63,7 +63,7 @@ web.url: https://dev-dashboard.iamaiworld.ai
 api.base-url: https://api-dashboard-dev.iamaiworld.ai/api/v1
 fileClient.url: https://api-shelf-dev.iamaiworld.ai
 keycloak-client:
-  server-url: https://auth-dashboard-dev.iamaiworld.ai/auth
+  server-url: https://auth-preprod.iamaiworld.ai/auth
   realm: iamai
   rest-api:
     client-id: admin-cli
